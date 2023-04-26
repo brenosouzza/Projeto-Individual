@@ -26,16 +26,24 @@ body {
     height: 80px;
     width: 80px;
     position: relative;
-    animation-name: spfc;
+    /* animation-name: spfc;
     animation-duration: 5s;
     animation-iteration-count: infinite;
-    animation-timing-function: linear;
+    animation-timing-function: linear; */
+}
+.navbar {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    width: 300px;
+    justify-content: space-around;
+    flex-direction: row;
 }
 
-@keyframes spfc {
+/* @keyframes spfc {
     0%   {left:-5%;}
     25%  {left:25%;}
     50%  {left:50%}
     75%  {left:75%}
     100% {left:100%}
-}  
+}   */
