@@ -7,6 +7,24 @@ body {
 .header {
     background-color: red;
     border-bottom: 3px solid rgb(255, 255, 255);
+    height: 100px;
+}
+
+.logo img{
+    width: 130px;
+    height: 130px;
+    display: flex;
+    justify-self: left;
+}
+
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.estrelas img{
+    width: 100px;
 }
 
 .container {
@@ -15,28 +33,20 @@ body {
     width: 100%;
 }
 
-.titulo {
-    color: white;
-    font-weight: 900;
-    font-family: Arial, Helvetica, sans-serif;
-    margin-left: 35%;
-}
 
-.container img {
-    height: 80px;
-    width: 80px;
-    position: relative;
-    /* animation-name: spfc;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear; */
-}
 .navbar {
     display: flex;
     align-items: center;
     list-style: none;
-    width: 300px;
     justify-content: space-around;
+    align-self: center;
+    text-decoration: none;
+}
+
+.div-navbar {
+    display: flex;
+    text-decoration: none;
+    justify-content: space-evenly;
     flex-direction: row;
 }
 
