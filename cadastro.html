@@ -26,20 +26,20 @@
         <div class="container">
             <div class="form">
 
-                <h2 id="titulo-form">FAÇA PARTE DO TIME!</h2>
-                <h3>NOME:</h3>
-                <input type="text" id="inputNome">
+                <h2 id="titulo-form">FAÇA PARTE DO SPFC!</h2>
+                <h3>Nome:</h3>
+                <input type="text" id="input Nome">
     
-                <h3>E-MAIL:</h3>
-                <input type="email" id="inputEmail">
+                <h3>E-mail:</h3>
+                <input type="email" id="input Email">
     
-                <h3>SENHA:</h3>
-                <input type="password" id="inputSenha">
+                <h3>Senha:</h3>
+                <input type="password" id="input Senha">
                 
-                <h3>CONFIRMAR SENHA:</h3>
-                <input type="password" id="inputConfirmarSenha">
-    
-                <button onclick="entrar()">Entrar</button>
+                <h3>Confirmar senha:</h3>
+                <input type="password" id="input ConfirmarSenha">
+                <br>
+                <button onclick="entrar()" id="button-form">Entrar</button>
               </div>
         </div>
 </body>
@@ -50,8 +50,19 @@
         var usuario = {
             nome: inputNome.value,
             email: inputEmail.value,
-            senha: inputSenha.value
+            senha: inputSenha.value,
+
+        validar: function (){
+            if (this.usuario != "") {
+                alert("Preencha todos os campos!")
+            }
+            else  {
+                
+            }
         }
+    }
+    
+    usuario.validar();
 
 
         

@@ -1,11 +1,10 @@
 body {
     margin: 0;
     padding: 0;
-    background-image: url(imgs/vermei.jpg);
 }
 
 .header {
-    background-color: #D61717;
+    background-color: #d71920;
     border-bottom: 0.2rem solid rgb(0, 0, 0);
     height: 100px;
 }
