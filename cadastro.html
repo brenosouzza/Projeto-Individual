@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>São Paulo FC</title>
+</head>
+<link rel="stylesheet" href="style-index.css">
+<link rel="stylesheet" href="style-cadastro.css">
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="imgs/sao-paulo-fc-logo.png" alt="">
+            </div>     
+                <ul class="navbar">
+                    <li><a href="">História</a></li>
+                    <li><a href="">Títulos</a></li>
+                    <li><a href="">Ídolos</a></li>
+                </ul>        
+        </div>
+    </div>
+
+    <div class="banner">
+        <div class="container">
+            <div class="form">
+
+                <h2 id="titulo-form">FAÇA PARTE DO TIME!</h2>
+                <h3>NOME:</h3>
+                <input type="text" id="inputNome">
+    
+                <h3>E-MAIL:</h3>
+                <input type="email" id="inputEmail">
+    
+                <h3>SENHA:</h3>
+                <input type="password" id="inputSenha">
+                
+                <h3>CONFIRMAR SENHA:</h3>
+                <input type="password" id="inputConfirmarSenha">
+    
+                <button onclick="entrar()">Entrar</button>
+              </div>
+        </div>
+</body>
+</html>
+
+<script>
+    function entrar() {
+        var usuario = {
+            nome: inputNome.value,
+            email: inputEmail.value,
+            senha: inputSenha.value
+        }
+
+
+        
+    }
+</script>
