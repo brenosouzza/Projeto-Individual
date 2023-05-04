@@ -1,6 +1,6 @@
 .form {
-    background-color: #d71920;
-    border: 0.2rem solid black;
+    background-color: rgb(55, 54, 54);
+    border: 0.2rem solid white;
     display: flex;
     justify-content: center;
     flex-direction: column;

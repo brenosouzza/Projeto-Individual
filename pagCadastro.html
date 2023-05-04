@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blue Lock | Homepage</title>
+</head>
+<link rel="stylesheet" href="style-index.css">
+<link rel="stylesheet" href="style-cadastro.css">
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="imgs/Blue_Lock_Logo.png" alt="">
+            </div>     
+                <ul class="navbar">
+                    <li><a href=""></a></li>
+                    <li><a href="">Cadastrar</a></li>
+                    <li><a href="">Fazer login</a></li>
+                </ul>        
+        </div>
+    </div>
+
+    <div class="banner">
+        <div class="container">
+            
+            <div class="form">
+
+                <h2 id="titulo-form">Entre para o BLUE LOCK!</h2>
+                <h3>Nome:</h3>
+                <input type="text" id="inputNome">
+    
+                <h3>E-mail:</h3>
+                <input type="email" id="inputEmail">
+    
+                <h3>Senha:</h3>
+                <input type="password" id="inputSenha">
+                
+                <h3>Confirmar senha:</h3>
+                <input type="password" id="inputConfirmarSenha">
+                <br>
+                <button onclick="cadastrar()" id="button-form">Cadastrar</button>
+              </div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+
+    function cadastrar() {
+        var nome = inputNome.value;
+        var email = inputEmail.value;
+        var senha = inputSenha.value;
+        var confirmarSenha = inputConfirmarSenha.value;
+
+        var camposPreenchidos = nome == "" || email == "" || senha == "" || confirmarSenha == "";
+        var validacaoEmail = email.indexOf("@") == -1;
+        var validacaoConfirmarSenha = senha != confirmarSenha
+
+        var URL = "C:\Users\bruno\OneDrive\Área de Trabalho\SPTECH\vscode\PROJETO INDIVIDUAL\Projeto-Individual\index.html"
+
+        if(camposPreenchidos){
+            alert("Preencha todos os campos!")
+        }
+        else if (validacaoEmail) {
+            alert("Insira um e-mail válido!")
+        }
+        else if (validacaoConfirmarSenha){
+            alert("Senhas não coincidem!")
+        }
+
+        else {
+            alert("Cadastro realizado com sucesso!")
+        }
+    }
+
+</script>
