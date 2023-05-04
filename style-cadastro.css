@@ -8,20 +8,21 @@
     width: 30%;
     color: white;
     text-shadow: 0.06em 0.06em 0.1em black;
-    border-radius: 5%;
+    border-radius: 10px;
 }
 .form input {
     border: 2px solid black;
-    border-radius: 5%;
+    border-radius: 5px;
     
     
 }
 #button-form {
     margin-top: 0.5rem;
-    border-radius: 5%;  
+    border-radius: 10px;  
     background-color: #FFFF;
     color: black;
     width: 60%;
+    height: 10%;
 }
 
 .form h3 {
