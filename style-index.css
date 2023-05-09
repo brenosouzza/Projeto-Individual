@@ -1,11 +1,18 @@
-body {
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@600&display=swap');
+
+* {
+    font-family: 'Roboto Mono', monospace;
     margin: 0;
     padding: 0;
-      background-color: #003f9c;
+}
+body {
+    
+    background-color: #003f9c;
 }
 
 .header {
-    background-color: black;
+    background: linear-gradient(45deg, #003f9c, black);
     border-bottom: 0.2rem solid white;
     height: 75px;
     
@@ -45,27 +52,88 @@ body {
 .navbar li, .navbar a {
     color: white;
     text-decoration: none;
-    font-size: 120%;
+    font-size: 100%;
 }
 
+#img {
+    height: 100vh;
+    background-image: url(gif/blue-lock-anime.gif);
+    background-position: center;
+    background-size: cover;
+    
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+#img img {
+    width: 60px;
+    animation: jumping 1s linear infinite;
+    cursor: pointer;
+}
+
+@keyframes jumping {
+    from {transform: translateY(-15px);}
+    50% {transform: translateY(0);}
+    to {transform: translateY(-15px);}
+}
+
+.conteudo {
+    height: 100vh;
+    color: white;
+}
+
+#botao {
+    display: flex;
+    align-items: center;
+    margin-bottom: 100px;
+    height: 100px;
+    background-color: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
 .banner {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 550px;
-    
-    
-}
-
-.banner .container {
     height: 100%;
 }
 
 
+
+
 .banner .container {
+    position: absolute;
     display: flex;
     justify-content: center;
-    height: 450px;
-    
+    align-items: center;
+    height: 450px;   
 }
+
+.botao-para-baixo button {
+   width: 10px;
+} */
 

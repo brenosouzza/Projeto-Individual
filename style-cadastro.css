@@ -1,33 +1,43 @@
-.form {
-    background-color: rgb(55, 54, 54);
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.form-left {
+    
     border: 0.2rem solid white;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     flex-direction: column;
     align-items: center;
     width: 30%;
+    height: 100%;
     color: white;
+    background: linear-gradient(45deg, #003f9c, black); 
     text-shadow: 0.06em 0.06em 0.1em black;
-    border-radius: 10px;
+    border-radius: 10px; 
 }
-.form input {
-    border: 2px solid black;
-    border-radius: 5px;
-    
-    
+.banner .container .form-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-#button-form {
-    margin-top: 0.5rem;
-    border-radius: 10px;  
-    background-color: #FFFF;
-    color: black;
-    width: 60%;
-    height: 10%;
+.form-right {
+    margin-left: 10%;
+    background-image: url(gif/blue-lock-anime.gif);
+    width: 40%;
+    height: 80%;
 }
 
-.form h3 {
-    margin-bottom: 0%;
-    display: block;
+
+.form-left input {
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 40%;
+    
+    
 }
 
 #titulo-form {
