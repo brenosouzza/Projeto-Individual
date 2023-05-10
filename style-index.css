@@ -78,9 +78,27 @@ body {
     to {transform: translateY(-15px);}
 }
 
-.conteudo {
+.container-conteudo {
     height: 100vh;
     color: white;
+    background-color: #003f9c;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+
+.conteudo {
+    height: 80%;
+    width: 50%;
+    background-color: white;
+    color: black;
+    display: flex;
+    justify-content: center;
+}
+
+#select-personagens {
+    height: 5%
 }
 
 #botao {
@@ -88,7 +106,8 @@ body {
     align-items: center;
     margin-bottom: 100px;
     height: 100px;
-    background-color: black;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
 }
 
 
