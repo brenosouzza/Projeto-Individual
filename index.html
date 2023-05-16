@@ -4,74 +4,122 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blue Lock | Homepage</title>
+    <link rel="shortcut icon" href="imgs/favicon.ico.png" type="image/x-icon">
+    <title>São Paulo FC</title>
 </head>
 <link rel="stylesheet" href="style-index.css">
 <body>
     <div class="header">
         <div class="container">
-            <a id="logo" href="index.html">
-                <div class="logo">
-                    <img src="imgs/Blue_Lock_Logo.png" alt="">
-                </div>    
-            </a>
+            <div class="logo">
+                <img src="imgs/sao-paulo-fc-logo.png" alt="">
+            </div>     
                 <ul class="navbar">
-                    
-                    <li><a href="pagCadastro.html">Cadastrar</a></li>
-                    <li>|</li>
-                    <li><a href="">Fazer login</a></li>
-                    
+                    <li><a href=""></a></li>
+                    <li><a href=""></a></li>
+                    <li><a href="cadastro.html">Cadastre-se</a></li>
                 </ul>        
-            </div>
         </div>
-        
-        <div id="img">
-            <button id="botao" onclick="descer()"><img id="img_botao" src="imgs/setas-branca.png" alt=""></button>
-        </div>
+    </div>
 
-    <div class="container-conteudo">
-        MONTE SEU TIME!
-        <div class="conteudo">
-            .
-            <p><h3>Selecionar personagens</h3></p> 
-            <select name="" id="select-personagens">
-                <optgroup>
-                    <option value="">Nenhum</option>
-                    <option value="">Isagi</option>
-                    <option value="">Nagi</option>
-                    <option value="">Reo</option>
-                    <option value="">Rin</option>
-                    <option value="">Bachira</option>
-                </optgroup>
-            </select>
+    <div class="banner">
+        <div id="container_img" class="container-img">
+            Mundial de 1992 (São Paulo 2 x 1 Barcelona)
+            <img src="imgs/mundial-1992.jpg" alt="" id="div_mundial-92">
+            <!-- <img src="imgs/mundial-05.jpg" alt="" id="div_mundial-05">
+            <img src="imgs/mundial-1993.png" alt="" id="div_mundial-1993">   -->
+
+        </div>
+        <div class="div-circulo">
+            <div id="divPrimeiraImagem"><button onclick="primeiraImagem()" class="circulo c1" id="circulo1"></button></div>
+            <div id="divSegundaImagem"><button onclick="segundaImagem()" class="circulo c2" id="circulo2"></button></div>
+            <div id="divTerceiraImagem"><button onclick="terceiraImagem()" class="circulo c3" id="circulo3"></button></div>
+        </div>
+    </div>
+
+    <div class="banner-item divCeni">
+        <div class="container-item ceni"> 
+            <div class="container-esquerdo">
+                <div class="titulo">
+                    <h2>Rogério Ceni</h2>
+                </div>
+                <div class="img">
+                    <img src="imgs/rogerio-ceni.jpg" alt="">
+                </div>
+                <div class="descricao-img">São Paulo 2 x 1 Corinthians (2011)
+                </div>
+            </div>
+            <div class="container-direito">
+                <div class="text">
+                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit labore voluptatibus unde cum deleniti odio, nihil iste sit aliquid provident quia est vel rerum dolore aperiam exercitationem necessitatibus repellendus asperiores.</h3>
+                </div>
+            </div>
             
         </div>
     </div>
 
-        
-            
-        
-        
-<script src="main.js"></script>
-
-
-
-
-
-
-
-
-    <!-- <div class="banner">
-        <img src="gif/blue-lock-anime.gif" alt="">      
-        <div class="container">
-            <div class="botao-para-baixo">
-                <button><img src="imgs/seta1.png" alt=""></button>
+    <div class="banner-item divMorumbi">
+        <div class="container-item-morumbi"> 
+            <div class="container-esquerdo-morumbi">
+                <div class="text">
+                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit labore voluptatibus unde cum deleniti odio, nihil iste sit aliquid provident quia est vel rerum dolore aperiam exercitationem necessitatibus repellendus asperiores.</h3><!-- -->
+                </div>
             </div>
+            <div class="container-direito-morumbi">
+                <div class="titulo-morumbi">
+                    <h2>Morumbi</h2>
+                </div>
+                <div class="img-morumbi">
+                    <img src="imgs/morumbi_2.jpg" alt="">
+                </div>
+                <div class="descricao-img-morumbi">Morumbi na decisão do Paulista de 1989
+                </div>
+                </div>
+            
         </div>
     </div>
 
-    <div class="container">
+    
 
-    </div> -->
+
+
+    <div class="container-footer">
+        <div class="footer">
+            <div class="logo-footer">
+                <img src="imgs/sao-paulo-fc-logo.png" alt="">
+            </div>     
+        </div>
+    </div>
 </body>
 </html>
+
+<script>
+
+    function primeiraImagem() {
+        container_img.innerHTML = `Mundial de 1992 (São Paulo 2 x 1 Barcelona)<img src="imgs/mundial-1992.jpg" alt="" id="div_mundial-92">`
+        
+        circulo1.style.backgroundColor = "#615d5d"
+        circulo2.style.backgroundColor = "#FFFF"
+        circulo3.style.backgroundColor = "#FFFF"
+        
+        
+        /* <div class="div-circulo">
+            <div id="divPrimeiraImagem"><button onclick="primeiraImagem()" class="circulo c1"></button></div>
+            <div id="divSegundaImagem"><button onclick="segundaImagem()" class="circulo c2"></button></div>
+            <div id="divTerceiraImagem"><button onclick="terceiraImagem()" class="circulo c3"></button></div>
+        </div> */
+
+    }
+    function segundaImagem() {
+        container_img.innerHTML = `Mundial de 1993 (São Paulo 3 x 2 Milan)<img src="imgs/mundial-1993.png" alt="" id="div_mundial-1993">`
+        circulo1.style.backgroundColor = "#FFFF"
+        circulo2.style.backgroundColor = "#615d5d"
+        circulo3.style.backgroundColor = "#FFFF"
+    }
+    function terceiraImagem() {
+        container_img.innerHTML = `Mundial de 2005 (São Paulo 1 x 0 Liverpool)<img src="imgs/mundial-05.jpg" alt="" id="div_mundial-05">`
+        circulo1.style.backgroundColor = "#FFFF"
+        circulo2.style.backgroundColor = "#FFFF"
+        circulo3.style.backgroundColor = "#615d5d"
+    }
+</script>
