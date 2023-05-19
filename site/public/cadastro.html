@@ -20,7 +20,7 @@
             <ul class="navbar">
                 <li><a href=""></a></li>
                 <li><a href=""></a></li>
-                <li><a href="">Login</a></li>
+                <li><a href="login.html">Login</a></li>
                 <li><a href=""></a></li>
             </ul>
         </div>
@@ -73,10 +73,29 @@
         var senhaVar = inputSenha.value;
         var confirmacaoSenhaVar = inputConfirmarSenha.value;
 
-        if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
-            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
-            return false;
+        var camposPreenchidos = nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "";
+        var validacaoEmail = emailVar.indexOf("@") == -1;
+        var validacaoConfirmarSenha = senhaVar != confirmacaoSenhaVar
+
+        // if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
+        //     mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+        //     return false;
+        // }
+
+        if (camposPreenchidos) {
+            alert("Preencha todos os campos!")
         }
+        else if (validacaoEmail) {
+            alert("Insira um e-mail válido!")
+        }
+        else if (validacaoConfirmarSenha) {
+            alert("Senhas não coincidem!")
+        }
+
+        else {
+            alert("Cadastro realizado com sucesso!")
+        }
+    
       
         // Enviando o valor da nova input
         fetch("/usuarios/cadastrar", {
@@ -118,31 +137,5 @@
         cardErro.style.display = "none"
     }
 
-    // function cadastrar() {
-    //     var nome = inputNome.value;
-    //     var email = inputEmail.value;
-    //     var senha = inputSenha.value;
-    //     var confirmarSenha = inputConfirmarSenha.value;
-
-    //     var camposPreenchidos = nome == "" || email == "" || senha == "" || confirmarSenha == "";
-    //     var validacaoEmail = email.indexOf("@") == -1;
-    //     var validacaoConfirmarSenha = senha != confirmarSenha
-
-    //     var URL = "C:\Users\bruno\OneDrive\Área de Trabalho\SPTECH\vscode\PROJETO INDIVIDUAL\Projeto-Individual\index.html"
-
-    //     if (camposPreenchidos) {
-    //         alert("Preencha todos os campos!")
-    //     }
-    //     else if (validacaoEmail) {
-    //         alert("Insira um e-mail válido!")
-    //     }
-    //     else if (validacaoConfirmarSenha) {
-    //         alert("Senhas não coincidem!")
-    //     }
-
-    //     else {
-    //         alert("Cadastro realizado com sucesso!")
-    //     }
-    // }
 
 </script>

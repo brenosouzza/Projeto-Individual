@@ -1,35 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="imgs/favicon.ico.png" type="image/x-icon">
-    <title>São Paulo FC</title>
+    <title>São Paulo FC | QUIZ</title>
 </head>
 <link rel="stylesheet" href="style-index.css">
-<body>
+<link rel="stylesheet" href="style-quiz.css">
+
+<body id="body">
     <div class="header">
         <div class="container">
             <div class="logo">
                 <img src="imgs/sao-paulo-fc-logo.png" alt="">
-            </div>     
-                <ul class="navbar">
-                    <li><a href=""></a></li>
-                    <li><a href="">Títulos</a></li>
-                    <li><a href="">AJUDE O SPFC</a></li>
-                </ul>        
+            </div>
+            <ul class="navbar">
+                <li><a href=""></a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="">Sobre</a></li>
+            </ul>
         </div>
     </div>
-
     <div class="banner-quiz">
         <div class="container-quiz">
-            
+            <div class="titulo-quiz">
+                <h1>TRICOLOR QUIZ</h1>
+            </div>
+            <div class="pergunta hide">
+                <h2>Quantos gols tem Rogério Ceni na carreira?</h2>
+            </div>
+            <div class="div-respostas hide">
+                <button class="resposta1 button" id="botao1" onclick="verificarResposta(102)">102</button>
+                <button class="resposta2 button" id="botao2" onclick="verificarResposta(94)">94</button>
+                <button class="resposta3 button" id="botao3" onclick="verificarResposta(131)">131</button>
+                <button class="resposta4 button" id="botao4" onclick="verificarResposta(170)">170</button>
+            </div>
+            <div class="div-ProxPergunta hide">
+                    <button class="proxPergunta button" id="verificarResposta">Proxima pergunta</button>
+            </div>
         </div>
     </div>
-        
 
-    
+
+
 
 
 
@@ -37,8 +53,50 @@
         <div class="footer">
             <div class="logo-footer">
                 <img src="imgs/sao-paulo-fc-logo.png" alt="">
-            </div>     
+            </div>
         </div>
     </div>
 </body>
+
 </html>
+
+
+<script>
+
+    function verificarResposta(resposta) {  
+
+        if (resposta == 102) {
+        // alert("acertou")
+        botao1.style.backgroundColor = 'darkred'; botao1.style.color = 'white'; botao1.style.border =  '3px solid white';
+        botao2.style.backgroundColor = 'darkred';
+        botao3.style.backgroundColor = 'green';
+        botao4.style.backgroundColor = 'darkred';
+        }
+
+        else if (resposta == 94){
+        // alert("errou")
+        botao1.style.backgroundColor = 'darkred';
+        botao2.style.backgroundColor = 'darkred'; botao2.style.color = 'white'; botao2.style.border =  '3px solid white';
+        botao3.style.backgroundColor = 'green';
+        botao4.style.backgroundColor = 'darkred';
+        }
+
+        else if (resposta == 131){
+        // alert("errou")
+        botao1.style.backgroundColor = 'darkred';
+        botao2.style.backgroundColor = 'darkred';
+        botao3.style.backgroundColor = 'green'; botao3.style.color = 'white'; botao3.style.border = '3px solid white';
+        botao4.style.backgroundColor = 'darkred';
+        }
+
+        else {
+        botao1.style.backgroundColor = 'darkred';
+        botao2.style.backgroundColor = 'darkred';
+        botao3.style.backgroundColor = 'green';
+        botao4.style.backgroundColor = 'darkred'; botao4.style.color = 'white'; botao4.style.border =  '3px solid white';
+        }
+    }
+
+    
+
+</script>
