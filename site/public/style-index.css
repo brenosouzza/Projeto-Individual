@@ -62,7 +62,7 @@ body {
 }
 
 .banner .container-img img {
-    
+    width: 50%;
     height: 100%;
 }
 
@@ -80,6 +80,8 @@ body {
     background-image: url(imgs/background-img.png);
     background-size: cover;
     background-position: center;
+    display: flex;
+    align-items: center;
 }
 
 .banner .div-circulo {
