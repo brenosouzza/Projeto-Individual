@@ -29,17 +29,19 @@
             <div class="titulo-quiz">
                 <h1>TRICOLOR QUIZ</h1>
             </div>
-            <div class="pergunta hide">
-                <h2>Quantos gols tem Rogério Ceni na carreira?</h2>
-            </div>
-            <div class="div-respostas hide">
-                <button class="resposta1 button" id="botao1" onclick="verificarResposta(102)">102</button>
-                <button class="resposta2 button" id="botao2" onclick="verificarResposta(94)">94</button>
-                <button class="resposta3 button" id="botao3" onclick="verificarResposta(131)">131</button>
-                <button class="resposta4 button" id="botao4" onclick="verificarResposta(170)">170</button>
+            <div id="divPerguntaResposta">
+                <div class="pergunta hide">
+                    <h2>Quantos gols tem Rogério Ceni na carreira?</h2>
+                </div>
+                <div class="div-respostas hide">
+                    <button class="resposta1 button" id="botao1" onclick="verificarResposta(102)">102</button>
+                    <button class="resposta2 button" id="botao2" onclick="verificarResposta(94)">94</button>
+                    <button class="resposta3 button" id="botao3" onclick="verificarResposta(131)">131</button>
+                    <button class="resposta4 button" id="botao4" onclick="verificarResposta(170)">170</button>
+                </div>
             </div>
             <div class="div-ProxPergunta hide">
-                    <button class="proxPergunta button" id="verificarResposta">Proxima pergunta</button>
+                    <button class="proxPergunta button" id="verificarResposta" onclick="proxPergunta()">Proxima pergunta</button>
             </div>
         </div>
     </div>
@@ -98,5 +100,7 @@
     }
 
     
-
+    function proxPergunta () {
+        divPerguntaResposta.style.display = 'none'
+    }
 </script>
