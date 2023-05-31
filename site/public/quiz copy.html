@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imgs/favicon.ico.png" type="image/x-icon">
+    <title>São Paulo FC | QUIZ COPY</title>
+</head>
+<link rel="stylesheet" href="style-index.css">
+<link rel="stylesheet" href="style-quiz.css">
+
+<body id="body">
+    <div class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="imgs/sao-paulo-fc-logo.png" alt="">
+            </div>
+            <ul class="navbar">
+                <li><a href=""></a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="">Sobre</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="banner-quiz">
+        <div class="container-quiz">
+            <div class="titulo-quiz">
+                <h1>TRICOLOR QUIZ</h1>
+            </div>
+            <div id="divPerguntaResposta">
+                <div class="pergunta hide" id="divPergunta">
+                    
+                </div> 
+                <div class="div-respostas hide" id="divRespostas">
+                    <ul id="escolhas"></ul>
+                </div>
+            </div>
+            <div id="divResultado"></div>
+            <div class="div-ProxPergunta hide">
+                    <button class="proxPergunta button" id="verificarResposta">Próxima pergunta</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <div class="container-footer">
+        <div class="footer">
+            <div class="logo-footer">
+                <img src="imgs/sao-paulo-fc-logo.png" alt="">
+            </div>
+        </div>
+    </div>
+    <script>
+        const perguntas = [
+            { 
+                pergunta: "Quantos gols tem Rogério Ceni na carreira?",
+                escolhas: [131, 0, 152, 100],
+                resposta: 0
+            },
+            { 
+                pergunta: "Contra qual time o São Paulo jogou no mundial de 2005?",
+                escolhas: ["Barcelona", "Liverpool", "Milan", "Bayern"],
+                resposta: 1
+            }
+        ];
+    
+        var perguntaAtual = 0;
+        var score = 0;
+    
+        const perguntaElemento = document.getElementById("divPergunta");
+        const escolhasElemento = document.getElementById("divRespostas");
+        const btnVerificarResposta = document.getElementById("verificarResposta")
+        const resultadoElemento = document.getElementById("divResultado")
+        function carregarPergunta() {
+            const pergunta = perguntas[perguntaAtual];
+            perguntaElemento.textContent = pergunta.pergunta;
+    
+            escolhasElemento.innerHTML = "";
+    
+            for (var i = 0; i < pergunta.escolhas.length; i++) {
+                const li = document.createElement("li");
+                const inputEscolha = document.createElement("input");
+                inputEscolha.type = "radio";
+                inputEscolha.name = "escolha";
+                inputEscolha.value = i;
+                li.appendChild(inputEscolha);
+                li.appendChild(document.createTextNode(pergunta.escolhas[i]));
+                escolhasElemento.appendChild(li);
+    
+            }
+        }
+    
+        function checarResposta() {
+            const escolhaDoUsuario = document.querySelector("input[name='option']:checked");
+            if (escolhaDoUsuario) {
+                const respostaUsuario = parseInt(escolhaDoUsuario.value);
+                if(respostaUsuario === perguntas[perguntaAtual].resposta) {
+                    score++;
+                }
+                perguntaAtual++;
+                escolhaDoUsuario.checked = false;
+                if (perguntaAtual < perguntas.length) {
+                    carregarPergunta();
+                }
+                else {
+                    mostrarResultado();
+                }
+            }
+        }
+    
+        function mostrarResultado() {
+                        divPerguntaResposta.style.display = "none";
+                        resultadoElemento.textContent = `Você acertou ${score} de ${perguntas.length}`
+                    }
+                    btnVerificarResposta.addEventListener("click", checarResposta);
+                
+            </script>
+</body>
+
+</html>
+
+
+<!-- <script>
+    const perguntas = [
+        { 
+            pergunta: "Quantos gols tem Rogério Ceni na carreira?",
+            escolhas: [131, 0, 152, 100],
+            resposta: 0
+        },
+        { 
+            pergunta: "Contra qual time o São Paulo jogou no mundial de 2005?",
+            escolhas: ["Barcelona", "Liverpool", "Milan", "Bayern"],
+            resposta: 1
+        }
+    ];
+
+    var perguntaAtual = 0;
+    var score = 0;
+
+    const perguntaElemento = document.getElementById("divPergunta");
+    const escolhasElemento = document.getElementById("divRespostas");
+    const btnVerificarResposta = document.getElementById("verificarResposta")
+    const resultadoElemento = document.getElementById("divResultado")
+    function carregarPergunta() {
+        const pergunta = perguntas[perguntaAtual];
+        perguntaElemento.textContent = pergunta.pergunta;
+
+        escolhasElemento.innerHTML = "";
+
+        for (var i = 0; i < pergunta.escolhas.length; i++) {
+            const li = document.createElement("li");
+            const inputEscolha = document.createElement("input");
+            inputEscolha.type = "radio";
+            inputEscolha.name = "escolha";
+            inputEscolha.value = i;
+            li.appendChild(inputEscolha);
+            li.appendChild(document.createTextNode(pergunta.escolhas[i]));
+            escolhasElemento.appendChild(li);
+
+        }
+    }
+
+    function checarResposta() {
+        const escolhaDoUsuario = document.querySelector("input[name='option']:checked");
+        if (escolhaDoUsuario) {
+            const respostaUsuario = parseInt(escolhaDoUsuario.value);
+            if(respostaUsuario === perguntas[perguntaAtual].resposta) {
+                score++;
+            }
+            perguntaAtual++;
+            escolhaDoUsuario.checked = false;
+            if (perguntaAtual < perguntas.length) {
+                carregarPergunta();
+            }
+            else {
+                mostrarResultado();
+            }
+        }
+    }
+
+    function mostrarResultado() {
+                    divPerguntaResposta.style.display = "none";
+                    resultadoElemento.textContent = `Você acertou ${score} de ${perguntas.length}`
+                }
+                btnVerificarResposta.addEventListener("click", checarResposta);
+            
+        </script> -->

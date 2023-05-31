@@ -34,14 +34,14 @@
                     <h2>Quantos gols tem Rogério Ceni na carreira?</h2>
                 </div>
                 <div class="div-respostas hide" id="divRespostas">
-                    <button class="resposta1 button" id="botao1" onclick="verificarResposta(131)">131</button>
-                    <button class="resposta2 button" id="botao2" onclick="verificarResposta(94)">94</button>
-                    <button class="resposta3 button" id="botao3" onclick="verificarResposta(102)">102</button>
-                    <button class="resposta4 button" id="botao4" onclick="verificarResposta(170)">170</button>
+                    <button class="resposta1 button" id="botao 1" onclick="verificarResposta(131)">131</button>
+                    <button class="resposta2 button" id="botao 2" onclick="verificarResposta(94)">94</button>
+                    <button class="resposta3 button" id="botao 3" onclick="verificarResposta(102)">102</button>
+                    <button class="resposta4 button" id="botao 4" onclick="verificarResposta(170)">170</button>
                 </div>
             </div>
             <div class="div-ProxPergunta hide">
-                    <button class="proxPergunta button" id="verificarResposta" onclick="proxPergunta()">Proxima pergunta</button>
+                    <button class="proxPergunta button" id="verificarResposta" onclick="proxPergunta()">Iniciar quiz</button>
             </div>
         </div>
     </div>
@@ -65,33 +65,42 @@
 
 <script>
 
+
+    var listaPerguntaResposta
+
     function verificarResposta(resposta) {  
 
         if (resposta == 131) {
-        // alert("acertou")
+        
+
+  
+        
+            alert("acertou")
         botao1.style.backgroundColor = 'darkred'; botao1.style.color = 'white'; botao1.style.border =  '3px solid white';
         botao2.style.backgroundColor = 'darkred';
         botao3.style.backgroundColor = 'green';
         botao4.style.backgroundColor = 'darkred';
         }
 
-        // else if (resposta == 94){
-        // // alert("errou")
-        // botao1.style.backgroundColor = 'darkred';
-        // botao2.style.backgroundColor = 'darkred'; botao2.style.color = 'white'; botao2.style.border =  '3px solid white';
-        // botao3.style.backgroundColor = 'green';
-        // botao4.style.backgroundColor = 'darkred';
-        // }
+        else if (resposta == 94){
+        // alert("errou")
+        botao1.style.backgroundColor = 'darkred';
+        botao2.style.backgroundColor = 'darkred'; botao2.style.color = 'white'; botao2.style.border =  '3px solid white';
+        botao3.style.backgroundColor = 'green';
+        botao4.style.backgroundColor = 'darkred';
+        }
 
-        // else if (resposta == 102){
-        // // alert("errou")
-        // botao1.style.backgroundColor = 'darkred';
-        // botao2.style.backgroundColor = 'darkred';
-        // botao3.style.backgroundColor = 'green'; botao3.style.color = 'white'; botao3.style.border = '3px solid white';
-        // botao4.style.backgroundColor = 'darkred';
-        // }
+        else if (resposta == 102){
+        // alert("errou")
+        botao1.style.backgroundColor = 'darkred';
+        botao2.style.backgroundColor = 'darkred';
+        botao3.style.backgroundColor = 'green'; botao3.style.color = 'white'; botao3.style.border = '3px solid white';
+        botao4.style.backgroundColor = 'darkred';
+        }
 
         else {
+
+            botao1.style.backgroundColor = 'darkred'
         botao1.style.backgroundColor = 'darkred';
         botao2.style.backgroundColor = 'darkred';
         botao3.style.backgroundColor = 'green';
