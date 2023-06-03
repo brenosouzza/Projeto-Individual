@@ -213,12 +213,14 @@ body {
     color:black
 }
 
-/* .container-footer {
+
+
+.container-footer {
     height: 200px;
     display: flex;
     
     align-items: end;
-} */
+}
 .footer {
     background-color: black;
     height: 80%;
