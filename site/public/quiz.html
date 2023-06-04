@@ -101,6 +101,7 @@
       radio.type = "radio";
       radio.name = "option";
       radio.value = i;
+      li.id = "divLi"
       li.appendChild(radio);
       li.appendChild(document.createTextNode(question.options[i]));
       optionElements.appendChild(li);
@@ -117,7 +118,7 @@
 
       }
       else {
-        alert("Você errou!")
+        alert(`Você errou!`)
       }
       currentQuestion++;
       selectedOption.checked = false;

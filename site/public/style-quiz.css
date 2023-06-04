@@ -37,18 +37,20 @@
 .quizBox ul {
     list-style-type: none;
     width: 100%;
-    height: 20%;
+    height: 50%;
 }
 
 .quizBox li {
     border: 1px solid black;
     border-radius: 20px;
     width: 90%;
-    height: 25%;
+    height: 20%;
     margin-top: 10px;
     margin-right: 40px;
     background-color: #d71920;
     color: white;
+    display: flex;
+    align-items: center;
 }
 
 #question {
@@ -58,6 +60,15 @@
     width: 90%;
     display: flex;
     justify-content: center;
+    color: white;
+    align-items: center;
+}
+
+.quizBox button {
+    border: 1px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #d71920;
     color: white;
 }
 

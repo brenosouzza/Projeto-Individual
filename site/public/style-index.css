@@ -214,11 +214,10 @@ body {
 }
 
 
-
 .container-footer {
-    height: 150px;
-    display: flex;
+    height: 200px;
 }
+
 .footer {
     background-color: black;
     height: 100%;
