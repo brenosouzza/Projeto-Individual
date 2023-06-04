@@ -40,7 +40,7 @@
                     <input type="password" id="inputSenha">
                     <br>
                     <div class="botao">
-                        <button onclick="cadastrar()" id="button-form">Log In</button>
+                        <button onclick="entrar()" id="button-form">Log In</button>
                     </div>
 
                 </div>
@@ -60,31 +60,75 @@
 
 <script>
 
-    function cadastrar() {
-        var nome = inputNome.value;
-        var email = inputEmail.value;
-        var senha = inputSenha.value;
-        var confirmarSenha = inputConfirmarSenha.value;
 
-        var camposPreenchidos = nome == "" || email == "" || senha == "" || confirmarSenha == "";
-        var validacaoEmail = email.indexOf("@") == -1;
-        var validacaoConfirmarSenha = senha != confirmarSenha
+    function entrar() {
+        // aguardar();
 
-        var URL = "C:\Users\bruno\OneDrive\Área de Trabalho\SPTECH\vscode\PROJETO INDIVIDUAL\Projeto-Individual\index.html"
+        var emailVar = inputEmail.value;
+        var senhaVar = inputSenha.value;
 
-        if (camposPreenchidos) {
-            alert("Preencha todos os campos!")
+        if (emailVar == "" || senhaVar == "") {
+            cardErro.style.display = "block"
+            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+            // finalizarAguardar();
+            return false;
         }
-        else if (validacaoEmail) {
-            alert("Insira um e-mail válido!")
-        }
-        else if (validacaoConfirmarSenha) {
-            alert("Senhas não coincidem!")
-        }
-
         else {
-            alert("Cadastro realizado com sucesso!")
+            setInterval(sumirMensagem, 5000)
         }
+
+        console.log("FORM LOGIN: ", emailVar);
+        console.log("FORM SENHA: ", senhaVar);
+
+        fetch("/usuarios/autenticar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                emailServer: emailVar,
+                senhaServer: senhaVar
+            })
+        }).then(function (resposta) {
+            console.log("ESTOU NO THEN DO entrar()!")
+
+            if (resposta.ok) {
+                console.log(resposta);
+
+                resposta.json().then(json => {
+                    console.log(json);
+                    console.log(JSON.stringify(json));
+
+                    sessionStorage.EMAIL_USUARIO = json.email;
+                    sessionStorage.NOME_USUARIO = json.nome;
+                    sessionStorage.ID_USUARIO = json.id;
+                    sessionStorage.CPF_USUARIO = json.cpf;
+
+                    setTimeout(function () {
+                        window.location = "./quiz.html";
+                    }, 1000); // apenas para exibir o loading
+
+                });
+
+            } else {
+
+                console.log("Houve um erro ao tentar realizar o login!");
+
+                resposta.text().then(texto => {
+                    console.error(texto);
+                    // finalizarAguardar(texto);
+                });
+            }
+
+        }).catch(function (erro) {
+            console.log(erro);
+        })
+
+        return false;
+    }
+
+    function sumirMensagem() {
+        cardErro.style.display = "none"
     }
 
 </script>

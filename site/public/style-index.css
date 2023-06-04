@@ -216,14 +216,12 @@ body {
 
 
 .container-footer {
-    height: 200px;
+    height: 150px;
     display: flex;
-    
-    align-items: end;
 }
 .footer {
     background-color: black;
-    height: 80%;
+    height: 100%;
     width: 100%;
     display: flex;
     justify-content: center;
