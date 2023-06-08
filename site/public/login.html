@@ -42,6 +42,11 @@
                     <div class="botao">
                         <button onclick="entrar()" id="button-form">Log In</button>
                     </div>
+                    <div id="mensagem_erro"></div>
+                    <div class="divCadastrar">
+                        <h4>Não tem uma conta? Cadastre-se já!</h4>
+                        <button><a href="cadastro.html">Cadastre-se</a></button>
+                    </div>
 
                 </div>
             </div>
@@ -62,20 +67,17 @@
 
 
     function entrar() {
-        // aguardar();
+        
 
         var emailVar = inputEmail.value;
         var senhaVar = inputSenha.value;
 
         if (emailVar == "" || senhaVar == "") {
-            cardErro.style.display = "block"
-            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
-            // finalizarAguardar();
-            return false;
+            
+            mensagem_erro.innerHTML = `Preencha todos os campos!`;
+            
         }
-        else {
-            setInterval(sumirMensagem, 5000)
-        }
+        
 
         console.log("FORM LOGIN: ", emailVar);
         console.log("FORM SENHA: ", senhaVar);
@@ -113,10 +115,10 @@
             } else {
 
                 console.log("Houve um erro ao tentar realizar o login!");
-
+                mensagem_erro.innerHTML = `Login e/ou senha inválido(s)`
                 resposta.text().then(texto => {
                     console.error(texto);
-                    // finalizarAguardar(texto);
+                    
                 });
             }
 
@@ -127,8 +129,6 @@
         return false;
     }
 
-    function sumirMensagem() {
-        cardErro.style.display = "none"
-    }
+    
 
 </script>

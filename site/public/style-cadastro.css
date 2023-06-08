@@ -69,3 +69,20 @@
     display: flex;
     justify-content: center;
 }
+
+
+.divCadastrar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.divCadastrar button {
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    border: 2px black solid;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
