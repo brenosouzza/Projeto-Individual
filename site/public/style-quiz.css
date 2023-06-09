@@ -65,11 +65,19 @@
 }
 
 .quizBox button {
+    height: 100%;
+    width: 40%;
     border: 1px solid black;
     border-radius: 10px;
     cursor: pointer;
     background-color: #d71920;
     color: white;
+}
+
+.divButton {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 
