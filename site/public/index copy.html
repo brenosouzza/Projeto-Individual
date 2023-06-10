@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imgs/favicon.ico.png" type="image/x-icon">
+    <title>São Paulo FC | Home</title>
+</head>
+<link rel="stylesheet" href="style-index copy.css">
+
+<body>
+    <div class="header">
+        <div class="container">
+
+        </div>
+        <div class="container-branco">
+            <h3>SÃO PAULO FC</h3>
+            <div class="logo">
+                <img src="imgs/sao-paulo-fc-logo.png" alt="">
+            </div>
+
+            <ul class="navbar">
+                <li><a href="login.html">Login</a></li>
+                <li><a href="cadastro.html">Cadastre-se</a></li>
+            </ul>
+        </div>
+
+        <div class="container-preto"></div>
+    </div>
+
+    <div class="banner">
+        <h1>JOGOS HISTÓRICOS</h1>
+            <!--BANNER-->
+    <!-- Slideshow container -->
+
+    <div class="divSlides">
+
+        <div class="slideshow-container">
+            
+            <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+            
+            <!-- <div class="numbertext">1 / 5</div> -->
+            <img src="imgs/mundial-1992.jpg" style="width:600px">
+        <div class="mySlides-right">
+            <h2>Mundial 1992 - São Paulo 2x1 Barcelona</h2>
+        </div>
+            
+        </div>
+        
+        <div class="mySlides fade">
+            
+            <!-- <div class="numbertext">2 / 5</div> -->
+            <img src="imgs/mundial-1993.png" style="width:600px">
+            <h2>Mundial 1992 São Paulo 3x2 Milan</h2>
+        </div>
+        
+        <div class="mySlides fade">
+            
+            <!-- <div class="numbertext">3 / 5</div> -->
+            <img src="imgs/mundial-05.jpg" style="width:600px">
+            <h2>Mundial 2005 - São Paulo 1x0 Liverpool</h2>
+        </div>
+               
+        </div>
+        
+    </div>
+
+</div>
+
+    <div class="banner-item divCeni">
+        <h1>MOMENTOS MARCANTES</h1>
+        <div class="container-item ceni">
+            <div class="container-esquerdo">
+                <div class="titulo">
+                    <h2>Rogério Ceni</h2>
+                </div>
+                <div class="img">
+                    <img src="imgs/rogerio-ceni.jpg" alt="">
+                </div>
+                <div class="descricao-img">São Paulo 2 x 1 Corinthians (2011)
+                </div>
+            </div>
+            <div class="container-direito">
+                <div class="text-momento">
+                    <h3>Em uma tarde marcante, Rogério Ceni é decisivo no majestoso e alcança a inacreditável marca de
+                        100 GOLS contra o rival alvinegro.</h3>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="banner-item divMorumbi">
+        <div class="container-item-morumbi">
+            <div class="container-esquerdo-morumbi">
+                <div class="text-momento">
+                    <h3>Diante dos argentinos, no Morumbi, o time brasileiro venceu por 2 a 0 e garantiu a festa dos
+                        mais de 67 mil torcedores que compareceram ao estádio e viram a consagração do meia-atacante
+                        Lucas. O camisa 7 foi o destaque da competição continental.</h3><!-- -->
+                </div>
+            </div>
+            <div class="container-direito-morumbi">
+                <div class="titulo-morumbi">
+                    <h2>Morumbi</h2>
+                </div>
+                <div class="img-morumbi">
+                    <img src="imgs/Morumbi-Torcida-1.jpg" alt="">
+                </div>
+                <div class="descricao-img-morumbi">Morumbi na decisão da Sudamericana de 2012 contra o Tigres
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="divConquistas">
+        <div class="title">
+            <div class="carousel"></div>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="container-footer">
+        <div class="footer">
+            <div class="logo-footer">
+                <img src="imgs/sao-paulo-fc-logo.png" alt="">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script>
+
+    var slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides ");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none ";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+            slideIndex = 1
+        }
+        slides[slideIndex - 1].style.display = "block ";
+        setTimeout(showSlides, 3000); // 1000 = 1s / TEMPO PARA TROCAR DE IMAGEM
+    }
+</script>
