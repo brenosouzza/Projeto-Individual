@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,36 +9,70 @@
     <title>São Paulo FC | Home</title>
 </head>
 <link rel="stylesheet" href="style-index.css">
+
 <body>
     <div class="header">
         <div class="container">
+
+        </div>
+        <div class="container-branco">
+            <h3>SÃO PAULO FC</h3>
             <div class="logo">
                 <img src="imgs/sao-paulo-fc-logo.png" alt="">
-            </div>     
-                <ul class="navbar">
-                    <li><a href=""></a></li>
-                    <li><a href="login.html">Login</a></li>
-                    <li><a href="cadastro.html">Cadastre-se</a></li>
-                </ul>        
+            </div>
+
+            <ul class="navbar">
+                <li><a href="login.html">Login</a></li>
+                <li><a href="cadastro.html">Cadastre-se</a></li>
+            </ul>
         </div>
+
+        <div class="container-preto"></div>
     </div>
 
     <div class="banner">
-        <div id="container_img" class="container-img">
-            Mundial de 1992 (São Paulo 2 x 1 Barcelona)
-            <img src="imgs/mundial-1992.jpg" alt="" id="div_mundial-92">
+        <h1>JOGOS HISTÓRICOS</h1>
+            <!--BANNER-->
+    <!-- Slideshow container -->
 
+    <div class="divSlides">
 
+        <div class="slideshow-container">
+            
+            <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+            
+            <!-- <div class="numbertext">1 / 5</div> -->
+            <img src="imgs/mundial-1992.jpg" style="width:600px">
+        <div class="mySlides-right">
+            <h2>Mundial 1992 - São Paulo 2x1 Barcelona</h2>
         </div>
-        <div class="div-circulo">
-            <div id="divPrimeiraImagem"><button onclick="primeiraImagem()" class="circulo c1" id="circulo1"></button></div>
-            <div id="divSegundaImagem"><button onclick="segundaImagem()" class="circulo c2" id="circulo2"></button></div>
-            <div id="divTerceiraImagem"><button onclick="terceiraImagem()" class="circulo c3" id="circulo3"></button></div>
+            
         </div>
+        
+        <div class="mySlides fade">
+            
+            <!-- <div class="numbertext">2 / 5</div> -->
+            <img src="imgs/mundial-1993.png" style="width:600px">
+            <h2>Mundial 1992 São Paulo 3x2 Milan</h2>
+        </div>
+        
+        <div class="mySlides fade">
+            
+            <!-- <div class="numbertext">3 / 5</div> -->
+            <img src="imgs/mundial-05.jpg" style="width:600px">
+            <h2>Mundial 2005 - São Paulo 1x0 Liverpool</h2>
+        </div>
+               
+        </div>
+        
     </div>
 
+</div>
+
     <div class="banner-item divCeni">
-        <div class="container-item ceni"> 
+        <h1>MOMENTOS MARCANTES</h1>
+        <div class="container-item ceni">
             <div class="container-esquerdo">
                 <div class="titulo">
                     <h2>Rogério Ceni</h2>
@@ -49,8 +84,8 @@
                 </div>
             </div>
             <div class="container-direito">
-                <div class="text">
-                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit labore voluptatibus unde cum deleniti odio, nihil iste sit aliquid provident quia est vel rerum dolore aperiam exercitationem necessitatibus repellendus asperiores.</h3>
+                <div class="text-momento">
+                    <h3>Em um São Paulo e Corinthians na Arena Barueri, válido pela 16ª rodada do Campeonato Paulista de 2011, Rogério Ceni marcou o centésimo gol de sua carreira, o centésimo vestindo a camisa tricolor. </h3>
                 </div>
             </div>
             
@@ -58,10 +93,12 @@
     </div>
 
     <div class="banner-item divMorumbi">
-        <div class="container-item-morumbi"> 
+        <div class="container-item-morumbi">
             <div class="container-esquerdo-morumbi">
-                <div class="text">
-                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit labore voluptatibus unde cum deleniti odio, nihil iste sit aliquid provident quia est vel rerum dolore aperiam exercitationem necessitatibus repellendus asperiores.</h3><!-- -->
+                <div class="text-momento">
+                    <h3>Diante dos argentinos, no Morumbi, o tricolor venceu por 2 a 0 e garantiu a festa dos
+                        mais de 67 mil torcedores que compareceram ao estádio e viram a consagração do meia-atacante
+                        Lucas. O camisa 7 foi o destaque da competição continental.</h3><!-- -->
                 </div>
             </div>
             <div class="container-direito-morumbi">
@@ -69,16 +106,37 @@
                     <h2>Morumbi</h2>
                 </div>
                 <div class="img-morumbi">
-                    <img src="imgs/morumbi_2.jpg" alt="">
+                    <img src="imgs/Morumbi-Torcida-1.jpg" alt="">
                 </div>
-                <div class="descricao-img-morumbi">Morumbi na decisão do Paulista de 1989
+                <div class="descricao-img-morumbi">Morumbi na decisão da Sudamericana de 2012 contra o Tigres
                 </div>
-                </div>
-            
+            </div>
+
         </div>
     </div>
 
-    
+    <div class="divConquistas">
+        <div class="title">
+            <h2>Conquistas</h2>
+        </div>
+            <div class="carousel">
+                <div class="marquee">
+                    <ul class="marquee-content">
+                      <li><i class="taça libertadores"><img src="imgs/taça-libertadores.jpg" alt=""><span class="span-desc">Libertadores (3x)</span></i></li>
+                      <li><i class="taça mundial-92"><img src="imgs/taça-mundial-92.jpg" alt=""><span class="span-desc">Mundial Toyota (2x)</span></i></li>
+                      <li><i class="taça mundial-05"><img src="imgs/taça-mundial.jpg" alt=""><span class="span-desc">Mundial FIFA (1x)</span></i></li>
+                      <li><i class="taça sulamericana"><img src="imgs/taça-sulamericana.jpg" alt=""><span class="span-desc">Sulamericana (1x)</span></i></li>
+                      <li><i class="taça paulistao"><img src="imgs/taça-paulistao.jpg" alt=""><span class="span-desc">Paulistão (22x)</span></i></li>
+                      <li><i class="taça br-new"><img src="imgs/taça-brasileirao-new.jpg" alt=""><span class="span-desc">Brasileirão (6x)</span></i></li>
+                      <li><i class="taça recopa"><img src="imgs/taça-recopa.jpg" alt=""><span class="span-desc">Recopa (2x)</span></i></li>
+                      <li><i class="taça master-conmebol"><img src="imgs/taça-master-conmebol.jpg" alt=""><span class="span-desc">Master Conmebol(1x)</span></i></li>
+                      <li><i class="taça conmebol"><img src="imgs/taça-conmebol.jpg" alt=""><span class="span-desc">Conmebol(1x)</span></i></li>
+                    </ul>
+                  </div>
+            </div>
+    </div>
+
+
 
 
 
@@ -86,32 +144,40 @@
         <div class="footer">
             <div class="logo-footer">
                 <img src="imgs/sao-paulo-fc-logo.png" alt="">
-            </div>     
+            </div>
         </div>
     </div>
 </body>
+
 </html>
 
 <script>
+// Carrosel jogos históricos 
+    var slideIndex = 0;
+    showSlides();
 
-    function primeiraImagem() {
-        container_img.innerHTML = `Mundial de 1992 (São Paulo 2 x 1 Barcelona)<img src="imgs/mundial-1992.jpg" alt="" id="div_mundial-92">`
-        
-        circulo1.style.backgroundColor = "#615d5d"
-        circulo2.style.backgroundColor = "#FFFF"
-        circulo3.style.backgroundColor = "#FFFF"
-        
+    function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides ");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none ";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+            slideIndex = 1
+        }
+        slides[slideIndex - 1].style.display = "block ";
+        setTimeout(showSlides, 3000); // 1000 = 1s / TEMPO PARA TROCAR DE IMAGEM
     }
-    function segundaImagem() {
-        container_img.innerHTML = `Mundial de 1993 (São Paulo 3 x 2 Milan)<img src="imgs/mundial-1993.png" alt="" id="div_mundial-1993">`
-        circulo1.style.backgroundColor = "#FFFF"
-        circulo2.style.backgroundColor = "#615d5d"
-        circulo3.style.backgroundColor = "#FFFF"
-    }
-    function terceiraImagem() {
-        container_img.innerHTML = `Mundial de 2005 (São Paulo 1 x 0 Liverpool)<img src="imgs/mundial-05.jpg" alt="" id="div_mundial-05">`
-        circulo1.style.backgroundColor = "#FFFF"
-        circulo2.style.backgroundColor = "#FFFF"
-        circulo3.style.backgroundColor = "#615d5d"
+
+    //Carrosel conquistas
+    const root = document.documentElement;
+    const marqueeElementsDisplayed = getComputedStyle(root).getPropertyValue("--marquee-elements-displayed");
+    const marqueeContent = document.querySelector("ul.marquee-content");
+    
+    root.style.setProperty("--marquee-elements", marqueeContent.children.length);
+    
+    for(let i=0; i<marqueeElementsDisplayed; i++) {
+      marqueeContent.appendChild(marqueeContent.children[i].cloneNode(true));
     }
 </script>
