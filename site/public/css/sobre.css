@@ -1,7 +1,7 @@
 .banner-sobre {
     height: 100vh;
     width: 100%;
-    background-image: url(imgs/morumbi-lotado-banner.jpg);
+    background-image: url(../imgs/morumbi-lotado-banner.jpg);
     background-size: cover;
     /* display: flex;
     align-items: center; */
@@ -29,7 +29,7 @@
 }
 
 .card-sobre-mim .img-eu {
-    background-image: url(imgs/Eu-no-morumbi1.jpg);
+    background-image: url(../imgs/Eu-no-morumbi1.jpg);
     background-position: center;
     background-size: cover;
     width: 100%;
@@ -97,12 +97,6 @@
     transform: rotate(0deg);
     ;
 }
-
-/* .text-sobreMim3 {
-    position: relative;
-    width: 35%;
-    left: 40%;
-} */
 
 .sobre-rc3 {
     color: white;
@@ -178,3 +172,28 @@
     transform: rotate(135deg);
 }
 
+.fa-instagram {
+    background-color: white;
+}
+
+.contato {
+    border-left: white 1px solid;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contato ul {
+    display: flex;
+    padding: 0;
+}
+
+.contato li {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+}
+
+.contato h3 {
+    max-width: 70%;
+}

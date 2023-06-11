@@ -523,7 +523,7 @@ body {
 }
 
 .card .img-ceni {
-    background-image: url(imgs/rogerio-defesa-mundial.jpg);
+    background-image: url(../imgs/rogerio-defesa-mundial.jpg);
     background-position: center;
     background-size: cover;
     width: 100%;
@@ -628,7 +628,7 @@ body {
 }
 
 .card2 .img-ceni2 {
-    background-image: url(imgs/RC-100-gol.png);
+    background-image: url(../imgs/RC-100-gol.png);
     background-position: center;
     background-size: cover;
     width: 100%;
@@ -735,7 +735,7 @@ body {
 }
 
 .card3 .img-ceni3 {
-    background-image: url(imgs/um-mito-no-chile.jpg);
+    background-image: url(../imgs/um-mito-no-chile.jpg);
     background-position: center;
     background-size: cover;
     width: 100%;
@@ -847,27 +847,27 @@ body {
 }
 
 .img-1 {
-    background-image: url(imgs/morumbi-banner-vistodefora.jpg);
+    background-image: url(../imgs/morumbi-banner-vistodefora.jpg);
     background-size: cover;
 }
 
 .img-2 {
-    background-image: url(imgs/morumbi-banner.jpg);
+    background-image: url(../imgs/morumbi-banner.jpg);
     background-size: cover;
 }
 
 .img-3 {
-    background-image: url(imgs/Morumbi-Torcida-1.jpg);
+    background-image: url(../imgs/Morumbi-Torcida-1.jpg);
     background-size: cover;
 }
 
 .img-4 {
-    background-image: url(imgs/morumbi1.jpg);
+    background-image: url(../imgs/morumbi1.jpg);
     background-size: cover;
 }
 
 .img-1 {
-    background-image: url(imgs/morumbi_2.jpg);
+    background-image: url(../imgs/morumbi_2.jpg);
     background-size: cover;
 }
 
@@ -885,4 +885,36 @@ body {
     color: white;
     display: flex;
     justify-content: center;
+}
+
+.mensagem-quiz {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.mensagem-quiz li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 50px;
+    border: #d71920 solid 2px;
+    list-style: none;
+    border-radius: 20px;
+    text-decoration: none;
+    background-color: #d71920;
+    color: white;
+    transition: .2s ease;
+    
+}
+
+.mensagem-quiz li:hover {
+    background-color: white;
+    color: #d71920;
+    height: 55px;
+    width: 155px;
+    transition: .2s ease;
 }

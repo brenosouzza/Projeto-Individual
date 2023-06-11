@@ -3,6 +3,8 @@
     justify-content: center;
     align-items: center;
     height: 500px;
+    background-image: url(../imgs/morumbi-lotado-banner.jpg);
+    background-size: cover;
 }
 
 .container-quiz {
@@ -72,12 +74,20 @@
     cursor: pointer;
     background-color: #d71920;
     color: white;
+    transition: .2s ease;
 }
 
 .divButton {
     display: flex;
     justify-content: space-around;
     align-items: center;
+}
+
+.quizBox button:hover {
+    transition: .2 ease;
+    width: 45%;
+    background-color: white;
+    color: #d71920;
 }
 
 
