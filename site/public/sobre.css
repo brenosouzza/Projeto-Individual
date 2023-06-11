@@ -1,0 +1,180 @@
+.banner-sobre {
+    height: 100vh;
+    width: 100%;
+    background-image: url(imgs/morumbi-lotado-banner.jpg);
+    background-size: cover;
+    /* display: flex;
+    align-items: center; */
+}
+
+.container-sobre-mim {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.card-sobre-mim {
+    background-image: linear-gradient(#333, #333);
+    overflow: hidden;
+    border-radius: 16px;
+    max-width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: rgb(255, 255, 255) 0px 1px 20px;
+    color: white;
+    
+}
+
+.card-sobre-mim .img-eu {
+    background-image: url(imgs/Eu-no-morumbi1.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: .8;
+    transition: all .5s;
+    z-index: 2;
+}
+
+.card-sobre-mim:hover .img-eu {
+    opacity: 1;
+    width: 100%;
+    height: 320px;
+}
+
+.card-sobre-mim .img-eu span {
+    font-size: 24px;
+    font-weight: 100;
+    text-transform: uppercase;
+}
+
+.card-sobre-mim .content-sobre {
+    padding: 0px 20px;
+    overflow: hidden;
+    height: 0;
+    transition: all .5s;
+    transform: translateV(30px);
+    opacity: 0;
+}
+
+.card-sobre-mim:hover .content-sobre {
+    padding: 20px;
+    height: 300px;
+    transform: translateV(0px);
+    opacity: 1;
+}
+
+.card-sobre-mim .content-sobre p {
+    margin-bottom: 0;
+}
+
+.card-sobre-mim .content-sobre .titulo-sobre {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.card-sobre-mim .content-sobre .descricao-sobre {
+    font-size: 16px;
+    font-weight: 100;
+    opacity: .7;
+}
+
+.card-sobre-mim .arrow-sobre {
+    padding: 15px;
+    font-size: 20px;
+    font-weight: 100;
+    transform: rotate(-180deg);
+    transition: all .5s;
+}
+
+.card-sobre-mim:hover .arrow-sobre {
+    transform: rotate(0deg);
+    ;
+}
+
+/* .text-sobreMim3 {
+    position: relative;
+    width: 35%;
+    left: 40%;
+} */
+
+.sobre-rc3 {
+    color: white;
+      text-shadow: 
+               -1px -1px 0px #333, 
+              -1px 1px 0px #333,                    
+               1px -1px 0px #333,                  
+               1px 0px 0px #333;
+
+}
+
+.titulo-sobre-mim {
+    height: 10vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.carrossel {
+    height: 100%;
+    width: 30%;
+}
+
+
+.container-carrossel {
+    width: 500px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    /*  box-shadow is from materialize css's website */
+    box-shadow: 0 24px 38px 3px rgba(0, 0, 0, 0.14),
+        0 9px 46px 8px rgba(0, 0, 0, 0.12), 0 11px 15px -7px rgba(0, 0, 0, 0.2);
+}
+
+.container-carrosel img {
+    width: 100%;
+    z-index: -2;
+}
+
+.container-carrosel button {
+    height: 10%;
+    border: none;
+    outline: none;
+    background: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    padding: 1em;
+    display: flex;
+}
+
+.container-carrosel button .arrow-sobre {
+    border: solid #fff;
+    border-width: 0 4px 4px 0;
+    display: inline-block;
+    padding: 10px;
+    transition: transform 0.3s ease-out;
+    outline: none;
+}
+
+#right-btn {
+    margin: auto 0 auto -2em;
+}
+
+#right-btn .arrow {
+    transform: rotate(-45deg);
+}
+
+#left-btn {
+    z-index: 0;
+    margin: auto -2em auto 0;
+}
+
+#left-btn .arrow-sobre {
+    transform: rotate(135deg);
+}
+
