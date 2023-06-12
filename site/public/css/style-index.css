@@ -505,7 +505,7 @@ body {
     height: 30vh;
 }
 
-.card {
+.card1 {
     background-image: linear-gradient(#333, #333);
     overflow: hidden;
     border-radius: 16px;
@@ -522,7 +522,7 @@ body {
     
 }
 
-.card .img-ceni {
+.card1 .img-ceni1 {
     background-image: url(../imgs/rogerio-defesa-mundial.jpg);
     background-position: center;
     background-size: cover;
@@ -536,19 +536,19 @@ body {
     z-index: 2;
 }
 
-.card:hover .img-ceni {
+.card1:hover .img-ceni1 {
     opacity: 1;
     width: 100%;
     height: 250px;
 }
 
-.card .img-ceni span {
+.card1 .img-ceni1 span {
     font-size: 24px;
     font-weight: 100;
     text-transform: uppercase;
 }
 
-.card .content {
+.card1 .content1 {
     padding: 0px 20px;
     overflow: hidden;
     height: 0;
@@ -557,29 +557,29 @@ body {
     opacity: 0;
 }
 
-.card:hover .content {
+.card1:hover .content1 {
     padding: 20px;
     height: 260px;
     transform: translateV(0px);
     opacity: 1;
 }
 
-.card .content p {
+.card1 .content1 p {
     margin-bottom: 0;
 }
 
-.card .content .titulo {
+.card1 .content1 .titulo1 {
     font-size: 24px;
     font-weight: bold;
 }
 
-.card .content .descricao {
+.card1 .content1 .descricao1 {
     font-size: 16px;
     font-weight: 100;
     opacity: .7;
 }
 
-.card .arrow {
+.card1 .arrow1 {
     padding: 15px;
     font-size: 20px;
     font-weight: 100;
@@ -587,7 +587,7 @@ body {
     transition: all .5s;
 }
 
-.card:hover .arrow {
+.card1:hover .arrow1 {
     transform: rotate(0deg);
     ;
 }
@@ -598,7 +598,7 @@ body {
     left: 40%;
 }
 
-.sobre-rc {
+.sobre-rc1 {
     color: white;
       text-shadow: 
                -1px -1px 0px #333, 
