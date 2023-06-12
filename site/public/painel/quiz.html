@@ -133,13 +133,13 @@
       const answer = parseInt(selectedOption.value);
       if (answer === questions[currentQuestion].answer) {
         score++;
-        divVerificar.innerHTML = `<span style="background-color: green">Você acertou!</span> `
+        
         divVerificar.style.display = "none"
 
 
       }
       else {
-        divVerificar.innerHTML = `<span style="background-color: red">Você errou!</span> `
+        
         divVerificar.style.display = "none"
       }
       currentQuestion++;
