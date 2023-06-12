@@ -7,7 +7,7 @@
     background-size: cover;
 }
 
-.container-quiz {
+    .container-quiz {
     height: 90%;
     width: 40%;
     background-color: #d71920;
@@ -17,7 +17,7 @@
     justify-content: space-around;
     border: 3px solid black;
     border-radius: 20px;
-}
+} 
 
 
 .quizBox {
@@ -47,13 +47,15 @@
     border-radius: 20px;
     width: 90%;
     height: 20%;
+    margin-left: 15px;
     margin-top: 10px;
-    margin-right: 40px;
     background-color: #d71920;
     color: white;
     display: flex;
     align-items: center;
 }
+
+
 
 #question {
     border: 1px solid black;
@@ -90,7 +92,10 @@
     color: #d71920;
 }
 
-
-
-
-
+.banner-painel-quiz {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

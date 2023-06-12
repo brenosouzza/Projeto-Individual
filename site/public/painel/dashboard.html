@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/painel.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+  <body onload="{nome_usuario(); carregarDados()}">
+    <div class="banner-painel">
+        <div class="barra-navegacao">
+            <div class="welcome-msg">
+                <h2>Bem vindo,</h2>
+                    <h2 id="nomeUsuario"></h2>
+                    <h2 id="idUsuario" style="display: none;"></h2>
+            </div>
+            <ul class="navbar">
+                <li><a href="painel.html">Painel</a></li>
+                <li><a href="quiz.html">QUIZ!</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="">Posts!</a></li>
+                <li><a href="../index.html">Sair</a></li>
+            </ul>
+        </div>
+        <div class="banner-painel-dash">
+            <div class="titulo-dash">
+                <h2>Taxa de acertos</h2>
+            </div>
+            <div>
+                <div class="background-dash">
+                    <canvas id="myChart"></canvas>
+                </div>
+              </div>
+        </div>
+    </div>
+
+    
+      
+      
+      
+</body>
+</html>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+
+    
+    const nome = sessionStorage.NOME_USUARIO;
+    const id = sessionStorage.ID_USUARIO;
+
+    function nome_usuario() {
+        nomeUsuario.innerHTML = nome;
+        idUsuario.innerHTML = id
+    }
+
+
+    var scoreLista = [];
+    var usuarioLista = [];
+
+    function carregarDados() {
+  
+    fetch("/usuarios/inserirDados").then(function (resposta) {
+        if (resposta.ok) {
+            resposta.json().then(function (resposta) {
+                console.log("Dados recebidos: ", JSON.stringify(resposta));
+                //Respostas em Json Vetorizado resposta[] 
+                for (var posicao = 0; posicao < resposta.length; posicao++) {
+                    scoreLista.push(resposta[posicao].score);
+                    usuarioLista.push(resposta[posicao].nome);
+                    
+                }
+                criarGraficos();
+            });
+        } else {
+            throw ('Houve um erro na API!');
+        }
+    }).catch(function (resposta) {
+        console.error(resposta);
+    });
+} 
+
+    function criarGraficos() {
+
+      
+      const ctx = document.getElementById('myChart');
+      
+      new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: usuarioLista,
+            datasets: [{
+              label: 'Score',
+              data: scoreLista,
+              borderWidth: 1,
+              backgroundColor: 'red'
+            }]
+          },
+          options: {
+            scales: {
+              y: {
+                beginAtZero: true
+              }
+            }
+          }
+        });
+        
+      }
+      
+
+
+
+
+      </script>

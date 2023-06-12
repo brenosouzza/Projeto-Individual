@@ -2,69 +2,57 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="imgs/favicon.ico.png" type="image/x-icon">
-    <title>São Paulo FC | QUIZ</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../css/painel.css">
+  <link rel="stylesheet" href="../css/style-quiz.css">
 </head>
-<link rel="stylesheet" href="css/style-index.css">
-<link rel="stylesheet" href="css/style-quiz.css">
-<body id="body">
-  <div class="header">
-    <div class="container">
 
+<body onload="nome_usuario()">
+  <div class="banner-painel">
+    <div class="barra-navegacao">
+      <div class="welcome-msg">
+        <h2>Bem vindo,</h2>
+        <h2 id="nomeUsuario"></h2>
+      </div>
+      <ul class="navbar">
+        <li><a href="painel.html">Painel</a></li>
+        <li><a href="quiz.html">QUIZ!</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="">Posts!</a></li>
+        <li><a href="../index.html">Sair</a></li>
+      </ul>
     </div>
-    <div class="container-branco">
-        <h3>SÃO PAULO FC</h3>
-        <div class="logo">
-            <img src="imgs/sao-paulo-fc-logo.png" alt="">
+    <div class="banner-painel-quiz">
+      <div class="container-quiz">
+        <div id="quiz" class="quizBox">
+          <img src="../imgs/titulotricolorquiz.png" alt="">
+          <div id="question"></div>
+          <ul id="options"></ul>
+          <div class="divButton">
+            <button id="submit">Próxima pergunta</button>
+            <button onclick="verificarResposta()">Verificar Resposta</button>
+          </div>
+          <div id="divVerificar" style="background-color: white;"></div>
+          <div id="result"></div>
         </div>
-
-        <ul class="navbar">
-            <li><a href="./dashboard/painel.html">Painel</a></li>
-            <li><a href="login.html">Sair</a></li>
-        </ul>
+      </div>
     </div>
-
-    <div class="container-preto"></div>
-</div>
-    <div class="banner-quiz">
-        <div class="container-quiz">
-            <div id="quiz" class="quizBox">
-                <img src="imgs/titulotricolorquiz.png" alt="">
-                <div id="question"></div>
-                <ul id="options"></ul>
-                <div class="divButton">
-                  <button id="submit">Próxima pergunta</button>
-                  <button onclick="verificarResposta()">Verificar Resposta</button>
-                </div>
-                <div id="divVerificar" style="background-color: white;"></div>
-                <div id="result"></div>
-              </div>
-            
-              
-        </div>
-    </div>
-
-
-
-
-
-
-    <div class="container-footer">
-        <div class="footer">
-            <div class="logo-footer">
-                <img src="imgs/sao-paulo-fc-logo.png" alt="">
-            </div>
-        </div>
-    </div>
-    
+  </div>
 </body>
 
 </html>
 
 <script>
+
+  const nome = sessionStorage.NOME_USUARIO;
+  const id = sessionStorage.ID_USUARIO;
+
+  function nome_usuario() {
+    nomeUsuario.innerHTML = nome;
+  }
+
   const questions = [
     {
       question: "Quando foi o primeiro mundial do SPFC?",
@@ -105,7 +93,7 @@
 
     for (let i = 0; i < question.options.length; i++) {
 
-      
+
       const li = document.createElement("li");
       const radio = document.createElement("input");
       radio.type = "radio";
@@ -128,20 +116,14 @@
       if (answer === questions[currentQuestion].answer) {
         divVerificar.innerHTML = `<span style="color: green">Você acertou!</span> `
         divVerificar.style.display = "block"
-        
+
 
       }
       else {
         divVerificar.innerHTML = `<span style="color: red">Você errou!</span> `
         divVerificar.style.display = "block"
       }
-      // currentQuestion++;
-      // selectedOption.checked = false;
-      // if (currentQuestion < questions.length) {
-      //   loadQuestion();
-      // } else {
-      //   showResult();
-      // }
+
     }
 
   }
@@ -154,7 +136,7 @@
         score++;
         divVerificar.innerHTML = `<span style="background-color: green">Você acertou!</span> `
         divVerificar.style.display = "none"
-        
+
 
       }
       else {
@@ -173,15 +155,58 @@
 
   function showResult() {
     resultElement.textContent = `Você acertou ${score} de ${questions.length} questões.`;
+    var scoreVar = score
+
+    const nome = sessionStorage.NOME_USUARIO;
+    const idUsuario = sessionStorage.ID_USUARIO;
+
+      console.log(scoreVar)
+    /* conexao do score com o banco de dados */
+
+    // Enviando o valor da nova input
+    fetch("/usuarios/showResult", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        // crie um atributo que recebe o valor recuperado aqui
+        // Agora vá para o arquivo routes/usuario.js
+        scoreServer: scoreVar,
+        idUsuarioServer: idUsuario
+
+      })
+    }).then(function (resposta) {
+
+      console.log("resposta: ", resposta);
+
+      if (resposta.ok) {
+        alert("Suas respostas foram armazenadas. Direcionando para dashboard...")
+        setTimeout(() => {
+
+          window.location = "dashboard.html";
+        }, ".05")
+
+      } else {
+        throw ("Houve um erro ao tentar cadastrar o resultado!");
+      }
+    }).catch(function (resposta) {
+      console.log(`#ERRO: ${resposta}`);
+    });
+
+    return false;
   }
 
+  function sumirMensagem() {
+    cardErro.style.display = "none"
+  }
+
+
   submitButton.addEventListener("click", checkAnswer);
-  
-  
+
+
 
   loadQuestion();
+
+
 </script>
-
-
-
-

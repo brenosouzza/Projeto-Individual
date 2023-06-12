@@ -103,9 +103,6 @@
             alert("Senhas não coincidem!")
         }
 
-        else {
-            alert("Cadastro realizado com sucesso!")
-        }
     
       
         // Enviando o valor da nova input
@@ -126,13 +123,10 @@
             console.log("resposta: ", resposta);
 
             if (resposta.ok) {
-                cardErro.style.display = "block";
-
-                mensagem_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
-
+                alert("Cadastro realizado com sucesso. Redirecionando para o login...")
                 setTimeout(() => {
-                    window.location = "login.html";
-                }, "2000")
+                    window.location = "../login.html";
+                }, ".03")
 
             } else {
                 throw ("Houve um erro ao tentar realizar o cadastro!");
@@ -148,5 +142,6 @@
         cardErro.style.display = "none"
     }
 
-
+  
+ 
 </script>

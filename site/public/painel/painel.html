@@ -6,15 +6,17 @@
     <title>Document</title>
     <link rel="stylesheet" href="../css/painel.css">
 </head>
-<body>
+<body onload="nome_usuario()">
     <div class="banner-painel">
         <div class="barra-navegacao">
             <div class="welcome-msg">
-                <h2>Bem vindo ${usuario}</h2>
+                <h2>Bem vindo,</h2>
+                    <h2 id="nomeUsuario"></h2>
             </div>
             <ul class="navbar">
-                <li><a href="../quiz.html">QUIZ!</a></li>
-                <li><a href="">Dashboard</a></li>
+                <li><a href="painel.html">Painel</a></li>
+                <li><a href="quiz.html">QUIZ!</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
                 <li><a href="">Posts!</a></li>
                 <li><a href="../index.html">Sair</a></li>
             </ul>
@@ -22,3 +24,15 @@
     </div>
 </body>
 </html>
+
+<script>
+
+    const nome = sessionStorage.NOME_USUARIO;
+
+    function nome_usuario() {
+        nomeUsuario.innerHTML = nome;
+    }
+    
+
+
+</script>
